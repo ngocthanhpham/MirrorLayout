@@ -25,7 +25,7 @@ ApplicationWindow {
                 width: 400
                 height: 60
                 spacing: 5
-                //layoutDirection: Qt.RightToLeft
+//                layoutDirection: Qt.RightToLeft
 
                 Repeater{
                     id: repeater
@@ -35,7 +35,9 @@ ApplicationWindow {
                     MyRectangle{
                         function getOpacity(index){
                             var listOpacity = [1, 0.8, 0.6, 0.4, 0.2];
-                            return listOpacity[index];
+                            //return listOpacity[index];
+                            console.log(1-0.2*index);
+                            return 1-0.2*index;
                         }
                         width: 50
                         height: 50
